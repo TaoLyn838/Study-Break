@@ -6,7 +6,7 @@ Break&Study is a Window/MacOS desktop application. It allows users to set up stu
 ### Workflows
 link:https://www.figma.com/file/D7gU2G69M15RGaHfpF4ZZk/Stduy%26Break-design?node-id=0%3A1
 
-<img src= "https://github.com/TaoLyn838/Study-Break/blob/main/AppImages/Design%20graph.png" width="400" height="800"> <br>
+<img src= "https://github.com/TaoLyn838/Study-Break/blob/main/AppImages/Design%20graph.png" width="800" height="500"> <br>
 
 ### Existing Work
 - [x] User can open the each screen
