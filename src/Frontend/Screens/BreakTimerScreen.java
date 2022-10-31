@@ -9,7 +9,7 @@ import java.awt.*;
 
 public class BreakTimerScreen extends TimerScreen {
     private final UI ui;
-    private final ButtonManager buttonM;
+    private final ButtonManager breakButton;
     private JPanel breakPanel;
     private final Font font = new Font("Bradley Hand ITC", Font.BOLD, 30);
 
@@ -22,7 +22,7 @@ public class BreakTimerScreen extends TimerScreen {
     public BreakTimerScreen (UI ui) {
         super();
         this.ui = ui;
-        buttonM = new ButtonManager(ui);
+        breakButton = new ButtonManager(ui);
         breakTimer = new TimeTracker(ui, 3000);
     }
     @Override
@@ -48,7 +48,7 @@ public class BreakTimerScreen extends TimerScreen {
 
     private void assignButton() {
         for (String name : Options) {
-            JButton button = ui.assignJButton(name, buttonM.breakTimerActionListener(), font);
+            JButton button = ui.assignJButton(name, breakButton.breakTimerActionListener(), font);
             breakPanel.add(button);
         }
         breakPanel.setLayout(new GridLayout(Options.length + 1, 1));

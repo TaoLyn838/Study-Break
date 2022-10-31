@@ -11,7 +11,7 @@ import java.awt.event.ActionListener;
 
 public class TimeTracker {
 
-    private final JLabel timeLabel; // 这个是final class
+    private final JLabel timeLabel; //
     // private JLabel time
     private int elapsedTime = 0;
     private int seconds = 0;

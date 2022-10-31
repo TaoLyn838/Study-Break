@@ -9,7 +9,7 @@ import java.awt.*;
 
 public class StudyTimerScreen extends TimerScreen{
     private final UI ui;
-    private final ButtonManager buttonM;
+    private final ButtonManager studyButton;
     private JPanel studyPanel;
     private final Font font = new Font("Bradley Hand ITC", Font.BOLD, 30);
 
@@ -27,8 +27,8 @@ public class StudyTimerScreen extends TimerScreen{
     public StudyTimerScreen(UI ui) {
         super();
         this.ui = ui;
-        studyTimer = new TimeTracker(ui, 3000);
-        buttonM = new ButtonManager(ui);
+        studyTimer = new TimeTracker(ui, 9000);
+        studyButton = new ButtonManager(ui);
     }
     @Override
     public void show() {
@@ -53,7 +53,7 @@ public class StudyTimerScreen extends TimerScreen{
 
     private void assignButton() {
         for (String name : Options) {
-            JButton button = ui.assignJButton(name, buttonM.studyTimerActionListener(), font);
+            JButton button = ui.assignJButton(name, studyButton.studyTimerActionListener(), font);
             studyPanel.add(button);
         }
         studyPanel.setLayout(new GridLayout(Options.length + 1, 1));

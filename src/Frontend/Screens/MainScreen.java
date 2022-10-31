@@ -10,7 +10,7 @@ public class MainScreen {
     private final UI ui;
     private JPanel mainPanel;
     private final Font font = new Font("Bradley Hand ITC", Font.BOLD, 30);
-    private final ButtonManager buttons;
+    private final ButtonManager mainButton;
     private final String[] buttonOptions = new String[] {
 //            "Study",
 //            "BreakTimer",
@@ -21,7 +21,7 @@ public class MainScreen {
 
     public MainScreen(UI ui) {
         this.ui = ui;
-        buttons = new ButtonManager(ui);
+        mainButton = new ButtonManager(ui);
     }
 
     public void show() {
@@ -40,7 +40,7 @@ public class MainScreen {
 
     private void assignButton() {
         for (String name : buttonOptions) {
-            JButton button = ui.assignJButton(name, buttons.MainActionListener(), font);
+            JButton button = ui.assignJButton(name, mainButton.MainActionListener(), font);
             mainPanel.add(button);
         }
         mainPanel.setLayout(new GridLayout(buttonOptions.length + 1, 1));
